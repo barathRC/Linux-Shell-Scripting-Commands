@@ -1,0 +1,124 @@
+ Shortcuts
+• Ctrl-L clears the screen
+• Ctrl-C stops the current in-progress command
+• Up arrow shows previous commands
+• history will show the history of commands you have run
+• Ctrl-A moves the cursor to the beginning of the line
+• Ctrl-E moves the cursor to the end of the line
+• Tab automatically completes commands
+
+cat (Concatenate)
+   cat /var/log/auth.log
+• View the contents of a log file cd (Change directory)
+
+cd
+• Change directory cd /
+• Change to the root directory cd ..
+• Move up one directory
+   
+ cp (Copy)
+   cp text.txt text2.txt
+• Copies text.txt to a new file called text2.txt cp text.txt text2.txt
+• Overwrites the existing text2.txt with a copy of text.txt df -h
+
+df -h
+• Displays free space on storage devices diff
+
+diff diff.txt diff2.txt
+• Compares the two text files echo
+
+echo trainertests.com >> diff.txt
+• Add text to the diff.txt file find
+
+find /var -name *.log
+• Searches within /var and subdirectories grep
+
+grep user /etc/ssh/ssh_config
+• Displays any lines of the file ssh_config that include the term user grep -i “COMMAND LINE” /etc/ssh/ssh_config
+• Use quotes if the string has spaces
+• -i option: Ignore upper/lower case
+
+grep –R 127.0.0.1 /etc/
+• Search all files in the etc directory
+grep user /etc/ssh/ssh_config > sample.txt
+• Sends search results to a text file
+      
+ls | grep crontab
+• Sends command output to a text file head
+   head cloud-init.log
+• Displays the first 10 lines of the file head -n 5 cloud-init.log
+• Displays the first 5 lines of the file id
+
+id
+• Show the user you are logged in as and the groups you are part of ifconfig
+
+ifconfig
+• Display all network interfaces locate
+   locate cloud-init.log
+• Displays directory containing cloud-init.log
+   locate -I cloud-init.log
+• Displays directory containing cloud-init.log and ignores case ls (List)
+
+ls
+• List files in the current directory ls –all or ls -a
+• List files in the current directory including hidden files ls -a /var/
+• List files in the /var directory
+     
+ man (manual)
+man ls
+• To navigate and search: o ctrl-f
+o ctrl-b og oG
+o /string
+• To display help: oh
+• To quit: oq
+
+man –k ifconfig
+• Search all man files for ifconfig man –k “copy files”
+• Search all man files for the sting in quotes mkdir (Make directory)
+
+mkdir test
+• Create a new directory called test mkdir -p test2/test2
+• Make directory and subdirectory in a single command mkdir test2 test3
+• Make multiple directories mv (Move)
+
+mv text.txt test/
+• Moves text.txt to a different directory mv *.txt test/
+• Moves all txt files to a different directory
+   
+nano
+   nano text.txt
+• Allows you to edit the text file netstat
+
+netstat -r
+• Display the route table netstat -np | grep “80”
+• Display open connections for a specific port ping
+
+ping 8.8.8.8
+• Test the destination at 8.8.8.8 by sending ICMP packets ping -c 5 8.8.8.8
+• Test the destination at 8.8.8.8 by sending five ICMP packets
+
+pwd (Print working directory)
+pwd
+• Display the current directory rm (remove)
+
+rmr test/text.txt
+• Deletes the text.txt file in the directory called test rmdir (remove directory)
+
+rmdir test
+• Remove the directory called test sudo (super user do)
+
+sudo su
+• Allows a user to run commands as root
+• The user must have permissions to do this
+       
+exit
+• Exit out of sudo tail
+   tail -n 5 cloud-init.log
+• Displays the last 5 lines of the file touch
+
+touch text.txt
+• Create a new file called text.txt tree
+
+tree test/
+• List all files and subfolders and files within subfolders within the test directory
+   
